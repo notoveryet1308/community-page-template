@@ -4,6 +4,7 @@ import { Typography } from "antd";
 import { Gear } from "phosphor-react";
 
 import { StyledRouterLink, StyledHeaderRight } from "./style";
+import { smoothScroll } from "../../utils";
 
 const { Link } = Typography;
 
@@ -11,9 +12,24 @@ const HeaderRightSide = () => {
   return (
     <StyledHeaderRight>
       <nav className="header-nav">
-        <Link className="header-nav-item">Our Mission</Link>
-        <Link className="header-nav-item">Member</Link>
-        <Link className="header-nav-item">Event</Link>
+        <Link
+          className="header-nav-item"
+          onClick={() => smoothScroll("about-us-section")}
+        >
+          About us
+        </Link>
+        <Link
+          className="header-nav-item"
+          onClick={() => smoothScroll("member-section")}
+        >
+          Member
+        </Link>
+        <Link
+          className="header-nav-item"
+          onClick={() => smoothScroll("event-section")}
+        >
+          Event
+        </Link>
       </nav>
       <StyledRouterLink
         to="/admin-control"

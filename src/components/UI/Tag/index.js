@@ -5,9 +5,9 @@ import { StyledTag } from "./style";
 
 const { Text } = Typography;
 
-const Tag = ({ bgColor, value }) => {
+const Tag = ({ bgColor, value, type }) => {
   return (
-    <StyledTag bgColor={bgColor}>
+    <StyledTag bgColor={bgColor} className={`${type}-tag`}>
       <Text>{value}</Text>
     </StyledTag>
   );

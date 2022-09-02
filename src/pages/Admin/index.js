@@ -6,9 +6,10 @@ import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import { useCreatePageContext } from "../../context/CreatePageContext";
 import HighlightTextBox from "../../components/HighlightTextBox";
+import AboutUs from "../../components/AboutUs";
 
 const Admin = () => {
-  const { headerConfig, heroConfig, highlightBoxConfig } =
+  const { headerConfig, heroConfig, highlightBoxConfig, aboutUsConfig } =
     useCreatePageContext();
 
   const [isOpen, setOpen] = useState(true);
@@ -38,6 +39,16 @@ const Admin = () => {
         <HighlightTextBox
           bgColor={highlightBoxConfig.HIGHLIGHT_BOX.bgColor}
           highlightText={highlightBoxConfig.HIGHLIGHT_BOX.text}
+        />
+        <AboutUs
+          description={aboutUsConfig.ABOUT_US.description}
+          tagData={[
+            aboutUsConfig.ABOUT_US.tagData_one,
+            aboutUsConfig.ABOUT_US.tagData_two,
+            aboutUsConfig.ABOUT_US.tagData_three,
+            aboutUsConfig.ABOUT_US.tagData_four,
+            aboutUsConfig.ABOUT_US.tagData_five,
+          ]}
         />
       </div>
     </StyledAdmin>

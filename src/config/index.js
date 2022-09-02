@@ -24,6 +24,15 @@ export const LocalConfig = {
     bgColor: "#f8f8f8",
     text: "We don’t inherit the earth from our ancestors, we borrow it from our children.",
   },
+  ABOUT_US: {
+    tagData_one: "Awesome team",
+    tagData_two: "Value Collaboration",
+    tagData_three: "Chance to become certified Planters",
+    tagData_four: "Backed by government",
+    tagData_five: "We serve mother Earth",
+    description:
+      "Good feeling and makes the place worth living. It is the easiest way to beautify the surrounding. Trees are often planted on the parks, gardens, roadside, societies, and garden of our home for the purpose of reforming.",
+  },
 };
 
 export const AdminConfig = {

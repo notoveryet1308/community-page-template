@@ -27,3 +27,15 @@ export const configHighlightBoxInitialState = {
     bgColor: "#f8f8f8",
   },
 };
+
+export const configAboutUsInitialState = {
+  ABOUT_US: {
+    tagData_one: "Awesome team",
+    tagData_two: "Value Collaboration",
+    tagData_three: "Chance to become certified Planters",
+    tagData_four: "Backed by government",
+    tagData_five: "We serve mother Earth",
+    description:
+      "Good feeling and makes the place worth living. It is the easiest way to beautify the surrounding. Trees are often planted on the parks, gardens, roadside, societies, and garden of our home for the purpose of reforming.",
+  },
+};

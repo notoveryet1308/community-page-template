@@ -9,4 +9,8 @@ export const StyledInputWrapper = styled.div`
     font-weight: 500;
     text-transform: uppercase;
   }
+
+  .info-label {
+    font-weight: 400;
+  }
 `;

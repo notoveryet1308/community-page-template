@@ -7,6 +7,7 @@ import { StyledEditButton, StyledDrawer } from "./style";
 import HeaderInput from "./createInputs/HeaderInput";
 import HeroSectionInput from "./createInputs/HeroSectionInput";
 import HighlightBoxInput from "./createInputs/HIghlightBoxInput";
+import AboutUsInput from "./createInputs/AboutUsInput";
 
 const { Title } = Typography;
 
@@ -34,6 +35,7 @@ const CreatePageInput = ({ drawerVisible, toggleDrawer }) => {
           <HeaderInput />
           <HeroSectionInput />
           <HighlightBoxInput />
+          <AboutUsInput />
         </div>
         <div className="create-page-actions">
           <Button type="link">Preview</Button>

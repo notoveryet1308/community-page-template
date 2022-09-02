@@ -30,7 +30,7 @@ const Hero = ({
       <div className="hero-section-right">
         {tagData.map((data, id) => (
           <div className={`tag-id-${id} hero-tag`}>
-            <Tag {...data} bgColor={compColors[id]} />
+            <Tag {...data} bgColor={compColors[id]} type="filled" />
           </div>
         ))}
       </div>
