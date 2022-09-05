@@ -4,12 +4,16 @@ import { headerReducer } from "./reducers/headerReducer";
 import { heroReducer } from "./reducers/heroReducer";
 import { highlightBoxReducer } from "./reducers/highlighTextBoxReducer";
 import { aboutUsReducer } from "./reducers/aboutUsReducer";
+import { memberReducer } from "./reducers/memberReducer";
+import { eventReducer } from "./reducers/eventReducer";
 
 import {
   configHeaderInitialState,
   configHeroInitialState,
   configHighlightBoxInitialState,
   configAboutUsInitialState,
+  configMemberInitialState,
+  configEventInitialState,
 } from "./initialData";
 import { CONFIG_CONSTANT } from "./constants";
 
@@ -36,6 +40,16 @@ const CreatePageContextProvider = ({ children }) => {
     configAboutUsInitialState
   );
 
+  const [memberConfig, memberDispatch] = useReducer(
+    memberReducer,
+    configMemberInitialState
+  );
+
+  const [eventConfig, eventDispatch] = useReducer(
+    eventReducer,
+    configEventInitialState
+  );
+
   const value = {
     headerConfig,
     headerDispatch,
@@ -45,6 +59,10 @@ const CreatePageContextProvider = ({ children }) => {
     highlightBoxDispatch,
     aboutUsConfig,
     aboutUsDispatch,
+    memberConfig,
+    memberDispatch,
+    eventConfig,
+    eventDispatch,
   };
   return (
     <CreatePageContext.Provider value={value}>
@@ -65,6 +83,10 @@ export const useCreatePageContext = () => {
     highlightBoxDispatch,
     aboutUsConfig,
     aboutUsDispatch,
+    memberConfig,
+    memberDispatch,
+    eventConfig,
+    eventDispatch,
   } = useContext(CreatePageContext);
   return {
     headerConfig,
@@ -75,6 +97,10 @@ export const useCreatePageContext = () => {
     highlightBoxDispatch,
     aboutUsConfig,
     aboutUsDispatch,
+    memberConfig,
+    memberDispatch,
+    eventConfig,
+    eventDispatch,
     CONFIG_CONSTANT,
   };
 };

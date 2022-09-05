@@ -28,7 +28,7 @@ const HeaderRightSide = () => {
           className="header-nav-item"
           onClick={() => smoothScroll("event-section")}
         >
-          Event
+          Community feed
         </Link>
       </nav>
       <StyledRouterLink

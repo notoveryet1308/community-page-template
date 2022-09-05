@@ -8,6 +8,8 @@ import HeaderInput from "./createInputs/HeaderInput";
 import HeroSectionInput from "./createInputs/HeroSectionInput";
 import HighlightBoxInput from "./createInputs/HIghlightBoxInput";
 import AboutUsInput from "./createInputs/AboutUsInput";
+import MemberInput from "./createInputs/MemberInput";
+import EventInput from "./createInputs/EventInput";
 
 const { Title } = Typography;
 
@@ -36,6 +38,8 @@ const CreatePageInput = ({ drawerVisible, toggleDrawer }) => {
           <HeroSectionInput />
           <HighlightBoxInput />
           <AboutUsInput />
+          <MemberInput />
+          <EventInput />
         </div>
         <div className="create-page-actions">
           <Button type="link">Preview</Button>

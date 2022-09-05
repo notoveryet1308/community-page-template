@@ -14,6 +14,7 @@ const HeroSectionInput = () => {
   return (
     <StyledInputWrapper>
       <Text className="input-label text-value-rt">Hero Section Input</Text>
+      <Divider type="horizontal" />
       <InputWithLabel
         label="Main text"
         value={heroConfig.HERO.mainText}
@@ -77,7 +78,6 @@ const HeroSectionInput = () => {
           })
         }
       />
-      <Divider type="horizontal" />
     </StyledInputWrapper>
   );
 };

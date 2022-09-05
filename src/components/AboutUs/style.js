@@ -43,11 +43,11 @@ export const StyledAboutUs = styled.div`
       justify-content: flex-start;
 
       .tags-wrapper {
-         display: flex;
-         /* justify-content: center;
+        display: flex;
+        /* justify-content: center;
          align-items: center; */
-         flex-wrap: wrap;
-         gap: 8px;
+        flex-wrap: wrap;
+        gap: 8px;
       }
     }
   }

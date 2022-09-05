@@ -1,12 +1,15 @@
 import React from "react";
 import AboutUs from "../../components/AboutUs";
+import EventSection from "../../components/EventSection";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import HighlightTextBox from "../../components/HighlightTextBox";
+import Members from "../../components/Members";
 import { LocalConfig } from "../../config";
 import { StyledHomePage } from "./style";
 
-const { HEADER, HERO, primaryColor, HIGHLIGHT_BOX, ABOUT_US } = LocalConfig;
+const { HEADER, HERO, primaryColor, HIGHLIGHT_BOX, ABOUT_US, MEMBERS, EVENTS } =
+  LocalConfig;
 
 const Home = () => {
   return (
@@ -33,6 +36,8 @@ const Home = () => {
           ABOUT_US.tagData_five,
         ]}
       />
+      <Members memberData={MEMBERS.data} />
+      <EventSection eventData={EVENTS.data} />
     </StyledHomePage>
   );
 };

@@ -7,10 +7,18 @@ import Hero from "../../components/Hero";
 import { useCreatePageContext } from "../../context/CreatePageContext";
 import HighlightTextBox from "../../components/HighlightTextBox";
 import AboutUs from "../../components/AboutUs";
+import Members from "../../components/Members";
+import EventSection from "../../components/EventSection";
 
 const Admin = () => {
-  const { headerConfig, heroConfig, highlightBoxConfig, aboutUsConfig } =
-    useCreatePageContext();
+  const {
+    headerConfig,
+    heroConfig,
+    highlightBoxConfig,
+    aboutUsConfig,
+    memberConfig,
+    eventConfig,
+  } = useCreatePageContext();
 
   const [isOpen, setOpen] = useState(true);
   const toggleDrawer = () => {
@@ -50,6 +58,8 @@ const Admin = () => {
             aboutUsConfig.ABOUT_US.tagData_five,
           ]}
         />
+        <Members memberData={memberConfig.MEMBERS.data} />
+        <EventSection eventData={eventConfig.EVENTS.data} />
       </div>
     </StyledAdmin>
   );

@@ -6,4 +6,5 @@ export const Colors = {
   BLUEISH: "#2436D7",
   PRIMARY_COLOR: "#08bd80",
   OFF_WHITE: "#f6f6f6",
+  TEXT_GRAY: "#707070",
 };

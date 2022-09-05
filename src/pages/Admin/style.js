@@ -47,11 +47,14 @@ export const StyledEditButton = styled.div`
 export const StyledDrawer = styled(Drawer)`
   .ant-drawer-body {
     padding: 0;
+    .ant-divider-horizontal {
+      margin: 4px 0;
+    }
   }
 
   .create-inputs-fields {
     position: relative;
-    padding: 24px;
+    /* padding: 24px; */
     .create-page-title {
       color: ${Colors.DARK_BLUE};
     }

@@ -14,6 +14,7 @@ const AboutUsInput = () => {
   return (
     <StyledInputWrapper>
       <Text className="input-label text-value-rt">About Us Input</Text>
+      <Divider type="horizontal" />
       <InputWithLabel
         label="Enter description"
         type="text"
@@ -85,7 +86,6 @@ const AboutUsInput = () => {
           });
         }}
       />
-      <Divider type="horizontal" />
     </StyledInputWrapper>
   );
 };
