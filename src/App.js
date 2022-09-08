@@ -10,10 +10,10 @@ export default function App() {
       <Route exact path="/">
         <Home />
       </Route>
-      <Route path="/admin-control">
+      <Route exact path="/admin-control">
         <Admin />
       </Route>
-      <Route path="/published">
+      <Route exact path="/published">
         <Publish />
       </Route>
     </Switch>
