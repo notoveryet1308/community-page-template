@@ -19,6 +19,8 @@ const EventBanner = ({
   eventStatus,
   joiningLink,
 }) => {
+  const dateFormatted = new Date(date).toDateString();
+
   return (
     <StyledEventBanner eventStatus={eventStatus}>
       <Title level={4} className="event-banner-title text-value-rt">
@@ -28,7 +30,7 @@ const EventBanner = ({
       <div className="event-detail">
         <div className="event-detail-left">
           <Text className="event-place text-value-rt"> {place}</Text>
-          <Text className="event-date text-value-rt"> {date}</Text>
+          <Text className="event-date text-value-rt"> {dateFormatted}</Text>
           <Button
             type="link"
             href={joiningLink}

@@ -16,9 +16,18 @@ export const StyledMembers = styled.div`
   .member-list-wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
+    column-gap: 20px;
+    row-gap: 40px;
     justify-content: center;
     align-items: center;
+    align-self: center;
+  }
+
+  @media (max-width: ${Breakpoint.DESKTOP}px) {
+    .member-list-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
   }
 
   @media (max-width: ${Breakpoint.LARGE_TABLET}px) {
@@ -32,9 +41,18 @@ export const StyledMembers = styled.div`
     .member-title {
       margin-bottom: 30px;
     }
+
+    .member-list-wrapper {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
   }
 
   @media (max-width: ${Breakpoint.MOBILE}px) {
     padding: 20px;
+    .member-list-wrapper {
+      grid-template-columns: 360px;
+      gap: 20px;
+    }
   }
 `;

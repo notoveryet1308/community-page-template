@@ -6,6 +6,7 @@ export const StyledSectionTitle = styled.div`
   position: relative;
   display: inline-block;
   transition: all 1s ease-in-out;
+  background: ${Colors.WHITE};
 
   .section-title-text {
     z-index: 2;
@@ -13,16 +14,16 @@ export const StyledSectionTitle = styled.div`
   }
 
   &::after {
-    bottom: 4px;
-    left: 0;
+    bottom: -2px;
+    left: -3px;
     content: "";
     z-index: -2;
-    height: 20%;
+    height: 50%;
     position: absolute;
     border-radius: 2px;
     transition: all 1s ease-in-out;
     width: ${({ inView }) => (inView ? "100%" : 0)};
-    box-shadow: 0px 1px 5px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 5px -4px rgba(0, 0, 0, 0.75);
     background: ${({ inView }) => inView && Colors.PRIMARY_COLOR};
   }
 

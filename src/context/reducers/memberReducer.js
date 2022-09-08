@@ -1,4 +1,5 @@
 import { CONFIG_CONSTANT } from "../constants";
+import { memberReset } from "../initialData";
 
 export const memberReducer = (state, action) => {
   console.log({ state, action });
@@ -7,7 +8,12 @@ export const memberReducer = (state, action) => {
     case CONFIG_CONSTANT.MEMBER_DATA:
       return {
         ...state,
+        noData: false,
         MEMBERS: { data: updateMemberData(state.MEMBERS.data, payload) },
+      };
+    case "RESET":
+      return {
+        ...memberReset,
       };
   }
 };

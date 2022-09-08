@@ -1,4 +1,6 @@
+import { updateReducerArrayData } from "../../utils";
 import { CONFIG_CONSTANT } from "../constants";
+import { eventReset } from "../initialData";
 
 export const eventReducer = (state, action) => {
   const { type, payload } = action;
@@ -6,28 +8,12 @@ export const eventReducer = (state, action) => {
     case CONFIG_CONSTANT.EVENTS_DATA:
       return {
         ...state,
-        EVENTS: { data: updateEventData(state.EVENTS.data, payload) },
+        noData: false,
+        EVENTS: { data: updateReducerArrayData(state.EVENTS.data, payload) },
+      };
+    case "RESET":
+      return {
+        ...eventReset,
       };
   }
-};
-
-const updateEventData = (data = [], payload) => {
-  const { id } = payload;
-
-  const modifyingIndex = data.findIndex((h) => h.id == id);
-
-  console.log({
-    red: data,
-    modifyingIndex,
-    check: 1 / modifyingIndex || modifyingIndex,
-  });
-  if (1 / modifyingIndex === Infinity || modifyingIndex > 0) {
-    console.log("modify");
-
-    data[modifyingIndex] = payload;
-  } else {
-    console.log("pushed");
-    data.push(payload);
-  }
-  return data;
 };

@@ -60,8 +60,8 @@ export const StyledHeroSection = styled.section`
     width: 100%;
     min-height: 50vh;
     background-image: ${({ bgImg }) => `url(${bgImg})`};
-    background-position: top;
-    background-size: contain;
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
 
     .hero-tag {

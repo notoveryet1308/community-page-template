@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../styles/theme";
+import { Colors, Breakpoint } from "../../styles/theme";
 import { Drawer } from "antd";
 
 export const StyledAdmin = styled.div`
@@ -25,6 +25,22 @@ export const StyledAdmin = styled.div`
       height: 100%;
       position: absolute;
       background-color: transparent;
+    }
+  }
+
+  .home-horizontal-divider {
+    padding: 0 120px;
+
+    @media (max-width: ${Breakpoint.LARGE_TABLET}px) {
+      padding: 0 60px;
+    }
+
+    @media (max-width: ${Breakpoint.TABLET}px) {
+      padding: 0 40px;
+    }
+
+    @media (max-width: ${Breakpoint.MOBILE}px) {
+      padding: 0 20px;
     }
   }
 `;
@@ -53,24 +69,46 @@ export const StyledDrawer = styled(Drawer)`
   }
 
   .create-inputs-fields {
+    padding: 10px;
     position: relative;
-    /* padding: 24px; */
-    .create-page-title {
-      color: ${Colors.DARK_BLUE};
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    .create-input-accordion {
+      .accordion-body-content {
+        padding: 10px;
+      }
+
+      &.faq-accordion {
+        .accordion-body-content {
+          padding-bottom: 50px;
+        }
+      }
     }
   }
 
   .create-page-actions {
-    position: sticky;
+    width: 400px;
+    position: fixed;
     bottom: 0;
-    background-color: #f8f8f8;
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 16px 24px;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid ${Colors.PRIMARY_COLOR};
     .action-wrapper {
       display: flex;
       column-gap: 16px;
+    }
+    .publish-btn {
+      background-color: ${Colors.PRIMARY_COLOR};
+      color: ${Colors.WHITE};
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 4px 16px;
     }
   }
 `;

@@ -15,7 +15,7 @@ const Hero = ({
   tagData = [],
   primaryColor,
 }) => {
-  const compColors = chromatism.triad(primaryColor).rgb;
+  const compColors = primaryColor && chromatism.triad(primaryColor).rgb;
 
   return (
     <StyledHeroSection bgImg={heroImgUrl}>

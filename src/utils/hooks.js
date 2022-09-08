@@ -11,16 +11,17 @@ export const useScroll = () => {
 export const useInView = (elementID) => {
   const [inView, setInView] = useState(false);
 
-  addEventListener("scroll", () => {
-    const element = document.getElementById(elementID);
-    const top = element.getBoundingClientRect().top;
+  elementID &&
+    addEventListener("scroll", () => {
+      const element = document.getElementById(elementID);
+      const top = element.getBoundingClientRect().top;
 
-    if (!inView && top <= 240) {
-      setInView(true);
-    } else if (inView && top >= 400) {
-      setInView(false);
-    }
-  });
+      if (!inView && top <= 240) {
+        setInView(true);
+      } else if (inView && top >= 400) {
+        setInView(false);
+      }
+    });
 
   return { inView };
 };

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 import { List } from "phosphor-react";
 import { Typography, Button } from "antd";
 
@@ -10,10 +10,38 @@ import HighlightBoxInput from "./createInputs/HIghlightBoxInput";
 import AboutUsInput from "./createInputs/AboutUsInput";
 import MemberInput from "./createInputs/MemberInput";
 import EventInput from "./createInputs/EventInput";
+import { useCreatePageContext } from "../../context/CreatePageContext";
+import ExploreGroupInput from "./createInputs/ExploreGroupInput";
+import TestimonialInput from "./createInputs/TestimonialInput";
+import FaqInput from "./createInputs/FaqInput";
+import Accordion from "../../components/UI/Accordion";
 
 const { Title } = Typography;
 
 const CreatePageInput = ({ drawerVisible, toggleDrawer }) => {
+  const {
+    headerDispatch,
+    heroDispatch,
+    memberDispatch,
+    highlightBoxDispatch,
+    eventDispatch,
+    aboutUsDispatch,
+    exploreGroupDispatch,
+    testimonialDispatch,
+    faqDispatch,
+  } = useCreatePageContext();
+
+  const reset = () => {
+    headerDispatch({ type: "RESET", payload: "" });
+    heroDispatch({ type: "RESET", payload: "" });
+    memberDispatch({ type: "RESET", payload: "" });
+    highlightBoxDispatch({ type: "RESET", payload: "" });
+    eventDispatch({ type: "RESET", payload: "" });
+    aboutUsDispatch({ type: "RESET", payload: "" });
+    exploreGroupDispatch({ type: "RESET", payload: "" });
+    testimonialDispatch({ type: "RESET", payload: "" });
+    faqDispatch({ type: "RESET", payload: "" });
+  };
   return (
     <>
       {!drawerVisible && (
@@ -34,18 +62,58 @@ const CreatePageInput = ({ drawerVisible, toggleDrawer }) => {
         }
       >
         <div className="create-inputs-fields">
-          <HeaderInput />
-          <HeroSectionInput />
-          <HighlightBoxInput />
-          <AboutUsInput />
-          <MemberInput />
-          <EventInput />
+          <Accordion
+            head="Head Input"
+            className="create-input-accordion"
+            body={<HeaderInput />}
+          />
+          <Accordion
+            head="Hero Input"
+            className="create-input-accordion"
+            body={<HeroSectionInput />}
+          />
+          <Accordion
+            head="Highlight box Input"
+            className="create-input-accordion"
+            body={<HighlightBoxInput />}
+          />
+          <Accordion
+            head="About Input"
+            className="create-input-accordion"
+            body={<AboutUsInput />}
+          />
+          <Accordion
+            head="Member Input"
+            className="create-input-accordion"
+            body={<MemberInput />}
+          />
+          <Accordion
+            head="Event Input"
+            className="create-input-accordion"
+            body={<EventInput />}
+          />
+          <Accordion
+            head="Explore Input"
+            className="create-input-accordion"
+            body={<ExploreGroupInput />}
+          />
+          <Accordion
+            head="Testimonial Input"
+            className="create-input-accordion"
+            body={<TestimonialInput />}
+          />
+          <Accordion
+            head="Faq Input"
+            className="create-input-accordion faq-accordion"
+            body={<FaqInput />}
+          />
         </div>
         <div className="create-page-actions">
-          <Button type="link">Preview</Button>
           <div className="action-wrapper">
-            <Button>Reset</Button>
-            <Button type="primary">Publish</Button>
+            <Button onClick={reset}>Reset</Button>
+            <Link className="publish-btn" target="_blank" to="/published">
+              Publish
+            </Link>
           </div>
         </div>
       </StyledDrawer>

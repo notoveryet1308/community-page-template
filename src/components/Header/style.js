@@ -5,7 +5,7 @@ import { Colors, Breakpoint } from "../../styles/theme";
 export const StyledHeader = styled.header`
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 50;
   width: 100%;
   height: 60px;
   display: flex;
@@ -13,7 +13,7 @@ export const StyledHeader = styled.header`
   padding: 4px 60px;
   align-items: center;
   justify-content: space-between;
-  background-color: ${Colors.WHITE};
+  background-color: rgba(255,255,255, .9);
   border-bottom: ${({ isScrolled }) => isScrolled && "2px solid #f6f6f6"};
   box-shadow: ${({ isScrolled }) =>
     isScrolled && "0px 3px 6px -5px rgba(0,0,0,0.2)"};

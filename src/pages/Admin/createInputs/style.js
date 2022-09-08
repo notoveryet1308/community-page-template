@@ -5,13 +5,10 @@ export const StyledInputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 16px;
-  padding: 24px;
-  margin-bottom: 20px;
-  background-color: rgba(244, 244, 244, 0.5);
-  border: 1px solid rgba(112, 112, 112, 0.5);
+  padding: 10px;
 
-  .input-label {
-    font-weight: 500;
+  .input-label-text {
+    font-weight: 400;
     text-transform: uppercase;
   }
 

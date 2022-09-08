@@ -28,8 +28,8 @@ const EventInput = () => {
 
   return (
     <StyledInputWrapper>
-      <Text className="input-label text-value-rt">Event Input</Text>
-      <Divider type="horizontal" />
+      {/* <Text className="input-label text-value-rt">Event Input</Text>
+      <Divider type="horizontal" /> */}
       {loopSize.map((data) => (
         <EventFields
           getEventData={getEventData}

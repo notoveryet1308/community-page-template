@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../../styles/theme";
+import { Breakpoint, Colors } from "../../../styles/theme";
 
 export const StyledMemberCard = styled.div`
   position: relative;
@@ -17,7 +17,6 @@ export const StyledMemberCard = styled.div`
   .member-detail {
     left: 20px;
     width: 200px;
-    /* height: 60px; */
     bottom: -20px;
     position: absolute;
     border-radius: 4px;
@@ -34,4 +33,11 @@ export const StyledMemberCard = styled.div`
       color: #808080;
     }
   }
+
+  @media (max-width: ${Breakpoint.MOBILE}px) {
+    .thumbnail {
+      width: 100%;
+      height: 200px;
+    }
+  } ;
 `;

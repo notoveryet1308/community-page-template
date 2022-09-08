@@ -30,6 +30,10 @@ export const StyledEventSection = styled.div`
     .member-title {
       margin-bottom: 30px;
     }
+
+    .event-banner-wrapper {
+      grid-template-columns: 1fr;
+    }
   }
 
   @media (max-width: ${Breakpoint.MOBILE}px) {

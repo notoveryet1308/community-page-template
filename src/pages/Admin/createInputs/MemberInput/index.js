@@ -19,6 +19,8 @@ const MemberInput = () => {
       ? memberConfig.MEMBERS.data
       : Array(MEMBER_SIZE).fill(uuidv4());
 
+  console.log({ loopSize });
+
   const getCardData = (data) => {
     console.log({ data });
     memberDispatch({ type: CONFIG_CONSTANT.MEMBER_DATA, payload: data });
@@ -26,8 +28,8 @@ const MemberInput = () => {
 
   return (
     <StyledInputWrapper>
-      <Text className="input-label text-value-rt">Member Input</Text>
-      <Divider type="horizontal" />
+      {/* <Text className="input-label text-value-rt">Member Input</Text>
+      <Divider type="horizontal" /> */}
       {loopSize.map((data) => (
         <CardInput
           id={data?.id || data}

@@ -1,15 +1,29 @@
+import { Divider } from "antd";
 import React from "react";
 import AboutUs from "../../components/AboutUs";
 import EventSection from "../../components/EventSection";
+import ExploreGroup from "../../components/ExploreGroup";
+import FAQSection from "../../components/FAQ";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import HighlightTextBox from "../../components/HighlightTextBox";
 import Members from "../../components/Members";
+import Testimonial from "../../components/Testimonial";
 import { LocalConfig } from "../../config";
 import { StyledHomePage } from "./style";
 
-const { HEADER, HERO, primaryColor, HIGHLIGHT_BOX, ABOUT_US, MEMBERS, EVENTS } =
-  LocalConfig;
+const {
+  HEADER,
+  HERO,
+  primaryColor,
+  HIGHLIGHT_BOX,
+  ABOUT_US,
+  MEMBERS,
+  EVENTS,
+  EXPLORE_GROUP,
+  TESTIMONIAL,
+  FAQ,
+} = LocalConfig;
 
 const Home = () => {
   return (
@@ -38,6 +52,12 @@ const Home = () => {
       />
       <Members memberData={MEMBERS.data} />
       <EventSection eventData={EVENTS.data} />
+      <div className="home-horizontal-divider">
+        <Divider type="horizontal" />
+      </div>
+      <ExploreGroup exploreGroupData={EXPLORE_GROUP.data} />
+      <Testimonial testimonialData={TESTIMONIAL.data} />
+      <FAQSection faqData={FAQ.data} />
     </StyledHomePage>
   );
 };

@@ -6,6 +6,9 @@ import { highlightBoxReducer } from "./reducers/highlighTextBoxReducer";
 import { aboutUsReducer } from "./reducers/aboutUsReducer";
 import { memberReducer } from "./reducers/memberReducer";
 import { eventReducer } from "./reducers/eventReducer";
+import { exploreGroupReducer } from "./reducers/exploreGroupReducer";
+import { testimonialReducer } from "./reducers/testimonialReducer";
+import { faqReducer } from "./reducers/faqReducer";
 
 import {
   configHeaderInitialState,
@@ -14,6 +17,9 @@ import {
   configAboutUsInitialState,
   configMemberInitialState,
   configEventInitialState,
+  configExploreGroupInitialState,
+  configTestimonialInitialState,
+  configFAQInitialState,
 } from "./initialData";
 import { CONFIG_CONSTANT } from "./constants";
 
@@ -50,6 +56,20 @@ const CreatePageContextProvider = ({ children }) => {
     configEventInitialState
   );
 
+  const [exploreGroupConfig, exploreGroupDispatch] = useReducer(
+    exploreGroupReducer,
+    configExploreGroupInitialState
+  );
+  const [testimonialConfig, testimonialDispatch] = useReducer(
+    testimonialReducer,
+    configTestimonialInitialState
+  );
+
+  const [faqConfig, faqDispatch] = useReducer(
+    faqReducer,
+    configFAQInitialState
+  );
+
   const value = {
     headerConfig,
     headerDispatch,
@@ -63,6 +83,12 @@ const CreatePageContextProvider = ({ children }) => {
     memberDispatch,
     eventConfig,
     eventDispatch,
+    exploreGroupConfig,
+    exploreGroupDispatch,
+    testimonialConfig,
+    testimonialDispatch,
+    faqConfig,
+    faqDispatch,
   };
   return (
     <CreatePageContext.Provider value={value}>
@@ -87,6 +113,12 @@ export const useCreatePageContext = () => {
     memberDispatch,
     eventConfig,
     eventDispatch,
+    exploreGroupConfig,
+    exploreGroupDispatch,
+    testimonialConfig,
+    testimonialDispatch,
+    faqConfig,
+    faqDispatch,
   } = useContext(CreatePageContext);
   return {
     headerConfig,
@@ -101,6 +133,12 @@ export const useCreatePageContext = () => {
     memberDispatch,
     eventConfig,
     eventDispatch,
+    exploreGroupConfig,
+    exploreGroupDispatch,
+    testimonialConfig,
+    testimonialDispatch,
+    faqConfig,
+    faqDispatch,
     CONFIG_CONSTANT,
   };
 };

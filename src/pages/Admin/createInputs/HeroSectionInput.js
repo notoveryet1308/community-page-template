@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography, Divider } from "antd";
-import { Plus } from "phosphor-react";
 
 import { StyledInputWrapper } from "./style";
 import InputWithLabel from "../../../components/UI/InputWithLabel";
@@ -13,8 +12,8 @@ const HeroSectionInput = () => {
 
   return (
     <StyledInputWrapper>
-      <Text className="input-label text-value-rt">Hero Section Input</Text>
-      <Divider type="horizontal" />
+      {/* <Text className="input-label text-value-rt">Hero Section Input</Text>
+      <Divider type="horizontal" /> */}
       <InputWithLabel
         label="Main text"
         value={heroConfig.HERO.mainText}
