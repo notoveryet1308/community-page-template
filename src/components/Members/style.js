@@ -56,7 +56,7 @@ export const StyledMembers = styled.div`
   }
 
   @media (max-width: ${Breakpoint.TABLET}px) {
-    padding-top: 40px;
+    padding: 40px 0 20px 0;
     .member-list-wrapper {
       padding: 40px;
     }
@@ -69,7 +69,7 @@ export const StyledMembers = styled.div`
   }
 
   @media (max-width: ${Breakpoint.MOBILE}px) {
-    padding-top: 20px;
+    padding: 20px 0;
     .member-list-wrapper {
       padding: 20px;
     }
