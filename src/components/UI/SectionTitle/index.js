@@ -6,11 +6,16 @@ import { useInView } from "../../../utils/hooks";
 
 const { Title } = Typography;
 
-const SectionTitle = ({ value = "About Us", scrollId, className }) => {
+const SectionTitle = ({ value, scrollId, className, primaryColor }) => {
   const { inView } = useInView(scrollId);
 
   return (
-    <StyledSectionTitle id={scrollId} inView={inView} className={className}>
+    <StyledSectionTitle
+      id={scrollId}
+      inView={inView}
+      className={className}
+      primaryColor={primaryColor}
+    >
       <Title className="section-title-text text-value-rt">{value}</Title>
     </StyledSectionTitle>
   );

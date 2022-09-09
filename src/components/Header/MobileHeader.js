@@ -5,7 +5,7 @@ import { List } from "phosphor-react";
 import { StyledMobileHeaderRight } from "./style";
 import HeaderRightSide from "./HeaderRightSide";
 
-const MobileHeader = () => {
+const MobileHeader = ({ primaryColor }) => {
   const [isDrawerOpen, setDrawerOpen] = useState(false);
   const toggleDrawer = () => {
     setDrawerOpen(!isDrawerOpen);
@@ -20,7 +20,10 @@ const MobileHeader = () => {
         onClose={toggleDrawer}
         width={240}
       >
-        <HeaderRightSide />
+        <HeaderRightSide
+          primaryColor={primaryColor}
+          closeDrawer={toggleDrawer}
+        />
       </Drawer>
     </StyledMobileHeaderRight>
   );

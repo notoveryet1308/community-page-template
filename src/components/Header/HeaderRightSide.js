@@ -8,25 +8,34 @@ import { smoothScroll } from "../../utils";
 
 const { Link } = Typography;
 
-const HeaderRightSide = () => {
+const HeaderRightSide = ({ primaryColor, closeDrawer = () => {} }) => {
   return (
-    <StyledHeaderRight>
+    <StyledHeaderRight primaryColor={primaryColor}>
       <nav className="header-nav">
         <Link
           className="header-nav-item"
-          onClick={() => smoothScroll("about-us-section")}
+          onClick={() => {
+            smoothScroll("about-us-section");
+            closeDrawer();
+          }}
         >
           About us
         </Link>
         <Link
           className="header-nav-item"
-          onClick={() => smoothScroll("member-section")}
+          onClick={() => {
+            smoothScroll("member-section");
+            closeDrawer();
+          }}
         >
           Member
         </Link>
         <Link
           className="header-nav-item"
-          onClick={() => smoothScroll("event-section")}
+          onClick={() => {
+            smoothScroll("event-section");
+            closeDrawer();
+          }}
         >
           Event feed
         </Link>

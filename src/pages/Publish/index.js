@@ -32,6 +32,7 @@ const Publish = () => {
       <Header
         logoUrl={headerConfig.HEADER.logo}
         communityName={headerConfig.HEADER.communityName}
+        primaryColor={headerConfig.primaryColor}
       />
       <Hero
         heroImgUrl={heroConfig.HERO.heroImgUrl}
@@ -50,6 +51,7 @@ const Publish = () => {
       />
       <AboutUs
         description={aboutUsConfig.ABOUT_US.description}
+        primaryColor={headerConfig.primaryColor}
         tagData={[
           aboutUsConfig.ABOUT_US.tagData_one,
           aboutUsConfig.ABOUT_US.tagData_two,
@@ -58,13 +60,22 @@ const Publish = () => {
           aboutUsConfig.ABOUT_US.tagData_five,
         ]}
       />
-      <Members memberData={memberConfig.MEMBERS.data} />
-      <EventSection eventData={eventConfig.EVENTS.data} />
+      <Members
+        memberData={memberConfig.MEMBERS.data}
+        primaryColor={headerConfig.primaryColor}
+      />
+      <EventSection
+        eventData={eventConfig.EVENTS.data}
+        primaryColor={headerConfig.primaryColor}
+      />
       <div className="home-horizontal-divider">
         <Divider type="horizontal" />
       </div>
 
-      <ExploreGroup exploreGroupData={exploreGroupConfig.EXPLORE_GROUP.data} />
+      <ExploreGroup
+        exploreGroupData={exploreGroupConfig.EXPLORE_GROUP.data}
+        primaryColor={headerConfig.primaryColor}
+      />
       <TestimonialSection
         testimonialData={testimonialConfig.TESTIMONIAL.data}
       />

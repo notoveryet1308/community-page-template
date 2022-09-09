@@ -10,9 +10,13 @@ const GroupCard = ({
   groupDescription,
   groupSize,
   groupThumbnailUrl,
+  primaryColor,
 }) => {
   return (
-    <StyledGroupCard groupThumbnailUrl={groupThumbnailUrl}>
+    <StyledGroupCard
+      groupThumbnailUrl={groupThumbnailUrl}
+      primaryColor={primaryColor}
+    >
       <div className="thumbnail-holder"></div>
       <div className="group-size">
         {groupSize} <span>Members</span>

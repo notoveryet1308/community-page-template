@@ -29,7 +29,8 @@ export const StyledAboutUs = styled.div`
       }
 
       .read-more-btn {
-        background-color: ${Colors.PRIMARY_COLOR};
+        background-color: ${({ primaryColor }) =>
+          primaryColor || Colors.PRIMARY_COLOR};
         border: none;
         width: 150px;
       }
@@ -44,8 +45,6 @@ export const StyledAboutUs = styled.div`
 
       .tags-wrapper {
         display: flex;
-        /* justify-content: center;
-         align-items: center; */
         flex-wrap: wrap;
         gap: 8px;
       }

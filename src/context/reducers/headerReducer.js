@@ -1,13 +1,13 @@
 import { CONFIG_CONSTANT } from "../constants";
 import { headerReset } from "../initialData";
 
+
 export const headerReducer = (state, action) => {
   const { type, payload } = action;
   switch (type) {
     case CONFIG_CONSTANT.HEADER_PRIMARY_COLOR:
       return {
         ...state,
-
         primaryColor: payload,
       };
     case CONFIG_CONSTANT.HEADER_LOGO:

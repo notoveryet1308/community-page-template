@@ -19,10 +19,7 @@ const EventInput = () => {
       ? eventConfig.EVENTS.data
       : Array(TOTAL_EVENT).fill(uuidv4());
 
-  console.log({ eventConfig });
-
   const getEventData = (data) => {
-    console.log({ data });
     eventDispatch({ type: CONFIG_CONSTANT.EVENTS_DATA, payload: data });
   };
 

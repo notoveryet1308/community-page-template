@@ -4,6 +4,7 @@ import AboutUs from "../../components/AboutUs";
 import EventSection from "../../components/EventSection";
 import ExploreGroup from "../../components/ExploreGroup";
 import FAQSection from "../../components/FAQ";
+import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Hero from "../../components/Hero";
 import HighlightTextBox from "../../components/HighlightTextBox";
@@ -28,7 +29,11 @@ const {
 const Home = () => {
   return (
     <StyledHomePage>
-      <Header logoUrl={HEADER.logo} communityName={HEADER.communityName} />
+      <Header
+        logoUrl={HEADER.logo}
+        communityName={HEADER.communityName}
+        primaryColor={primaryColor}
+      />
       <Hero
         heroImgUrl={HERO.heroImgUrl}
         mainText={HERO.mainText}
@@ -42,6 +47,7 @@ const Home = () => {
       />
       <AboutUs
         description={ABOUT_US.description}
+        primaryColor={primaryColor}
         tagData={[
           ABOUT_US.tagData_one,
           ABOUT_US.tagData_two,
@@ -50,14 +56,18 @@ const Home = () => {
           ABOUT_US.tagData_five,
         ]}
       />
-      <Members memberData={MEMBERS.data} />
-      <EventSection eventData={EVENTS.data} />
+      <Members memberData={MEMBERS.data} primaryColor={primaryColor} />
+      <EventSection eventData={EVENTS.data} primaryColor={primaryColor} />
       <div className="home-horizontal-divider">
         <Divider type="horizontal" />
       </div>
-      <ExploreGroup exploreGroupData={EXPLORE_GROUP.data} />
+      <ExploreGroup
+        exploreGroupData={EXPLORE_GROUP.data}
+        primaryColor={primaryColor}
+      />
       <Testimonial testimonialData={TESTIMONIAL.data} />
       <FAQSection faqData={FAQ.data} />
+      <Footer />
     </StyledHomePage>
   );
 };

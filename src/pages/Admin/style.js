@@ -63,6 +63,8 @@ export const StyledEditButton = styled.div`
 export const StyledDrawer = styled(Drawer)`
   .ant-drawer-body {
     padding: 0;
+    margin-bottom: 70px;
+
     .ant-divider-horizontal {
       margin: 4px 0;
     }
@@ -75,15 +77,10 @@ export const StyledDrawer = styled(Drawer)`
     display: flex;
     flex-direction: column;
     row-gap: 8px;
+
     .create-input-accordion {
       .accordion-body-content {
         padding: 10px;
-      }
-
-      &.faq-accordion {
-        .accordion-body-content {
-          padding-bottom: 50px;
-        }
       }
     }
   }
@@ -92,7 +89,7 @@ export const StyledDrawer = styled(Drawer)`
     width: 400px;
     position: fixed;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 16px 24px;
     display: flex;
     justify-content: center;

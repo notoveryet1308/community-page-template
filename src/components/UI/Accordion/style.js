@@ -14,7 +14,7 @@ const slideDown = keyframes`
 export const StyledAccordion = styled.div`
   position: relative;
   width: 100%;
-  transition: all 1s ease-in-out;
+  transition: all 200ms ease-in-out;
 
   .accordion-head {
     width: 100%;

@@ -33,6 +33,8 @@ const Admin = () => {
     setOpen(!isOpen);
   };
 
+  console.log({ highlightBoxConfig });
+
   return (
     <StyledAdmin drawerInputActive={isOpen}>
       <CreatePageInput drawerVisible={isOpen} toggleDrawer={toggleDrawer} />
@@ -41,6 +43,7 @@ const Admin = () => {
           <Header
             logoUrl={headerConfig.HEADER.logo}
             communityName={headerConfig.HEADER.communityName}
+            primaryColor={headerConfig.primaryColor}
           />
         )}
         {!heroConfig.noData && (
@@ -65,6 +68,7 @@ const Admin = () => {
         {!aboutUsConfig.noData && (
           <AboutUs
             description={aboutUsConfig.ABOUT_US.description}
+            primaryColor={headerConfig.primaryColor}
             tagData={[
               aboutUsConfig.ABOUT_US.tagData_one,
               aboutUsConfig.ABOUT_US.tagData_two,
@@ -75,10 +79,16 @@ const Admin = () => {
           />
         )}
         {!memberConfig.noData && (
-          <Members memberData={memberConfig.MEMBERS.data} />
+          <Members
+            memberData={memberConfig.MEMBERS.data}
+            primaryColor={headerConfig.primaryColor}
+          />
         )}
         {!eventConfig.noData && (
-          <EventSection eventData={eventConfig.EVENTS.data} />
+          <EventSection
+            eventData={eventConfig.EVENTS.data}
+            primaryColor={headerConfig.primaryColor}
+          />
         )}
         <div className="home-horizontal-divider">
           <Divider type="horizontal" />
@@ -86,6 +96,7 @@ const Admin = () => {
         {!exploreGroupConfig.noData && (
           <ExploreGroup
             exploreGroupData={exploreGroupConfig.EXPLORE_GROUP.data}
+            primaryColor={headerConfig.primaryColor}
           />
         )}
         {!testimonialConfig.noData && (

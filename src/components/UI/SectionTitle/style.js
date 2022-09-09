@@ -24,7 +24,8 @@ export const StyledSectionTitle = styled.div`
     transition: all 1s ease-in-out;
     width: ${({ inView }) => (inView ? "100%" : 0)};
     box-shadow: 0px 2px 5px -4px rgba(0, 0, 0, 0.75);
-    background: ${({ inView }) => inView && Colors.PRIMARY_COLOR};
+    background: ${({ inView, primaryColor }) =>
+      inView && (primaryColor || Colors.PRIMARY_COLOR)};
   }
 
   @media (max-width: ${Breakpoint.MOBILE}px) {

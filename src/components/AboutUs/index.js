@@ -7,13 +7,14 @@ import { StyledAboutUs } from "./style";
 
 const { Text, Title } = Typography;
 
-const AboutUs = ({ description, tagData = [] }) => {
+const AboutUs = ({ description, tagData = [], primaryColor }) => {
   return (
-    <StyledAboutUs>
+    <StyledAboutUs primaryColor={primaryColor}>
       <SectionTitle
         value="About Us"
         scrollId="about-us-section"
         className="about-us-title"
+        primaryColor={primaryColor}
       />
       <div className="about-us-content-wrapper">
         <div className="about-us-info">

@@ -20,19 +20,14 @@ const ExploreGroupInput = () => {
       : Array(TOTAL_GROUP).fill(uuidv4());
 
   const getGroupData = (data) => {
-    console.log({ data });
     exploreGroupDispatch({
       type: CONFIG_CONSTANT.EXPLORE_GROUP_DATA,
       payload: data,
     });
-
-    console.log({ loopSize });
   };
 
   return (
     <StyledInputWrapper>
-      {/* <Text className="input-label text-value-rt">Explore Group Input</Text>
-      <Divider type="horizontal" /> */}
       {loopSize.map((data) => (
         <ExploreGroupFields
           key={data?.id || data}

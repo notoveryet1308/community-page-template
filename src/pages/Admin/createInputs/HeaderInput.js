@@ -13,8 +13,6 @@ const HeaderInput = () => {
 
   return (
     <StyledInputWrapper>
-      {/* <Text className="input-label text-value-rt">Header Input</Text>
-      <Divider type="horizontal" /> */}
       <InputWithLabel
         label="Select primary color"
         type="color"

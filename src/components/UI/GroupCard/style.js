@@ -57,9 +57,11 @@ export const StyledGroupCard = styled.div`
 
   &:hover {
     transition: all 300ms ease-in-out;
-    border: 2px solid ${Colors.PRIMARY_COLOR};
+    border: 2px solid
+      ${({ primaryColor }) => primaryColor || Colors.PRIMARY_COLOR};
     .group-size {
-      background-color: ${Colors.PRIMARY_COLOR};
+      background-color: ${({ primaryColor }) =>
+        primaryColor || Colors.PRIMARY_COLOR};
     }
   }
 

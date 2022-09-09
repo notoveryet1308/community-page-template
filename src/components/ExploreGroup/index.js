@@ -4,13 +4,14 @@ import GroupCard from "../UI/GroupCard";
 import SectionTitle from "../UI/SectionTitle";
 import { StyledExploreGroup } from "./style";
 
-const ExploreGroup = ({ exploreGroupData = [] }) => {
+const ExploreGroup = ({ exploreGroupData = [], primaryColor }) => {
   return (
     <StyledExploreGroup>
       <SectionTitle
         value="Explore Group"
         className="explore-title-group"
         // scrollId="explore-group-title"
+        primaryColor={primaryColor}
       />
       <div className="explore-group-wrapper">
         {exploreGroupData.map((data) => {
@@ -20,6 +21,7 @@ const ExploreGroup = ({ exploreGroupData = [] }) => {
               groupDescription={data?.description}
               groupSize={data?.size}
               groupThumbnailUrl={data?.thumbnailUrl}
+              primaryColor={primaryColor}
             />
           );
         })}

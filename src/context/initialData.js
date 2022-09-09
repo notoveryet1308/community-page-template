@@ -156,23 +156,34 @@ export const configEventInitialState = {
       },
       {
         id: uuidv4(),
-        title: "1k Tree plantation program",
+        title: "Awareness program in rural area",
         description:
           "Good feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.",
         date: new Date().toDateString(),
-        place: "4th Avenvue Park Baner Pune",
+        place: "Bhakarwadi village Pune Baner ",
         participantsJoined: 20,
         joiningLink: "https://www.google.com/",
         eventStatus: "today",
       },
       {
         id: uuidv4(),
-        title: "1k Tree plantation program",
+        title: "Soil awareness program online event",
         description:
           "Good feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.",
         date: manipulateDate(-3),
-        place: "4th Avenvue Park Baner Pune",
+        place: "Online",
         participantsJoined: 20,
+        joiningLink: "https://www.google.com/",
+        eventStatus: "past",
+      },
+      {
+        id: uuidv4(),
+        title: "2k Tree plantation",
+        description:
+          "Good feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.  feeling and makes the place worth living. It is the easiest way to beautify the surrounding.",
+        date: manipulateDate(-3),
+        place: "Near Jodhpur Forest Rajasthan",
+        participantsJoined: 80,
         joiningLink: "https://www.google.com/",
         eventStatus: "past",
       },

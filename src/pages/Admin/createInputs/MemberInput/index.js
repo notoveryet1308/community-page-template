@@ -19,10 +19,7 @@ const MemberInput = () => {
       ? memberConfig.MEMBERS.data
       : Array(MEMBER_SIZE).fill(uuidv4());
 
-  console.log({ loopSize });
-
   const getCardData = (data) => {
-    console.log({ data });
     memberDispatch({ type: CONFIG_CONSTANT.MEMBER_DATA, payload: data });
   };
 

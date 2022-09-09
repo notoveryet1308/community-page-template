@@ -13,8 +13,6 @@ const HighlightBoxInput = () => {
 
   return (
     <StyledInputWrapper>
-      {/* <Text className="input-label text-value-rt">Text highligh box</Text>
-      <Divider type="horizontal" /> */}
       <InputWithLabel
         label="Enter highlight text"
         type="text"

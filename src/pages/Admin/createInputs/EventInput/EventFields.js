@@ -106,7 +106,6 @@ const EventFields = ({
         type="date"
         value={date}
         onChange={({ target }) => {
-          console.log({ target });
           setDate(target.value);
           checkEmptyField();
         }}

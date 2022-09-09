@@ -13,7 +13,7 @@ export const StyledHeader = styled.header`
   padding: 4px 60px;
   align-items: center;
   justify-content: space-between;
-  background-color: rgba(255,255,255, .9);
+  background-color: rgba(255, 255, 255, 0.9);
   border-bottom: ${({ isScrolled }) => isScrolled && "2px solid #f6f6f6"};
   box-shadow: ${({ isScrolled }) =>
     isScrolled && "0px 3px 6px -5px rgba(0,0,0,0.2)"};
@@ -55,7 +55,8 @@ export const StyledHeader = styled.header`
           color: ${Colors.DARK_BLUE};
           font-weight: 600;
           &:hover {
-            color: ${Colors.PRIMARY_COLOR};
+            color: ${({ primaryColor }) =>
+              primaryColor || Colors.PRIMARY_COLOR};
           }
         }
       }
@@ -102,7 +103,7 @@ export const StyledHeaderRight = styled.div`
       color: ${Colors.DARK_BLUE};
       font-weight: 600;
       &:hover {
-        color: ${Colors.PRIMARY_COLOR};
+        color: ${({ primaryColor }) => primaryColor || Colors.PRIMARY_COLOR};
       }
     }
   }

@@ -13,10 +13,11 @@ const { Title } = Typography;
 const Header = ({
   logoUrl = PlaceholderLogo,
   communityName = "Community Name",
+  primaryColor,
 }) => {
   const { scrollX } = useScroll();
   return (
-    <StyledHeader isScrolled={scrollX < 0}>
+    <StyledHeader isScrolled={scrollX < 0} primaryColor={primaryColor}>
       <div className="header-left">
         <img
           src={logoUrl}
@@ -28,7 +29,11 @@ const Header = ({
           {communityName}
         </Title>
       </div>
-      {!isMobile ? <HeaderRightSide /> : <MobileHeader />}
+      {!isMobile ? (
+        <HeaderRightSide primaryColor={primaryColor} />
+      ) : (
+        <MobileHeader primaryColor={primaryColor} />
+      )}
     </StyledHeader>
   );
 };
