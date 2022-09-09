@@ -33,11 +33,4 @@ export const StyledMemberCard = styled.div`
       color: #808080;
     }
   }
-
-  @media (max-width: ${Breakpoint.MOBILE}px) {
-    .thumbnail {
-      width: 100%;
-      height: 200px;
-    }
-  } ;
 `;
