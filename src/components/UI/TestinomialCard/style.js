@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Breakpoint } from "../../../styles/theme";
 
 export const StyledTestimonialCard = styled.div`
   display: flex;
@@ -25,5 +26,9 @@ export const StyledTestimonialCard = styled.div`
   .testimonial-value {
     text-align: center;
     font-weight: 400;
+  }
+
+  @media (max-width: ${Breakpoint.MOBILE}px) {
+    width: 100%;
   }
 `;

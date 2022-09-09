@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Colors } from "../../styles/theme";
+import { Breakpoint, Colors } from "../../styles/theme";
 
 export const StyledFooter = styled.div`
   position: relative;
@@ -13,7 +13,6 @@ export const StyledFooter = styled.div`
   row-gap: 20px;
 
   .footer-title {
-  
   }
 
   .social-media-handle {
@@ -25,7 +24,7 @@ export const StyledFooter = styled.div`
   }
   .go-to-top {
     position: absolute;
-    right: 100px;
+    right: 10px;
     display: flex;
     align-items: center;
     column-gap: 8px;
@@ -38,6 +37,19 @@ export const StyledFooter = styled.div`
     .move-text {
       font-size: 16px;
       font-weight: 500;
+    }
+  }
+
+  @media (max-width: ${Breakpoint.TABLET}px) {
+    .go-to-top {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      right: 10px;
+      top: 40px;
+      .move-text {
+        display: none;
+      }
     }
   }
 `;

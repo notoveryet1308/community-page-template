@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Breakpoint } from "../../styles/theme";
 
 export const StyledTestimonial = styled.div`
   position: relative;
@@ -61,5 +62,15 @@ export const StyledTestimonial = styled.div`
     z-index: 33;
     background: rgba(36, 172, 215, 0.5);
     box-shadow: -102px -9px 164px 197px rgba(36, 172, 215, 0.8);
+  }
+
+  @media (max-width: ${Breakpoint.MOBILE}px) {
+    .testimonial-view-placeholder {
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: unset;
+      padding: 0 20px;
+    }
   }
 `;

@@ -4,39 +4,80 @@ import { Breakpoint } from "../../styles/theme";
 export const StyledMembers = styled.div`
   display: flex;
   position: relative;
-  padding: 60px 120px;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  padding-top: 60px;
 
   .member-title {
-    margin-bottom: 50px;
+    margin: 0 120px;
   }
 
   .member-list-wrapper {
+    padding: 60px 120px;
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     column-gap: 20px;
-    row-gap: 40px;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+  }
+
+  .side-overlay {
+    position: absolute;
+    bottom: 30px;
+    width: 120px;
+    height: 280px;
+    background: rgba(255, 255, 255, 0.8);
+    &.left {
+      left: 0;
+    }
+    &.right {
+      right: 0;
+    }
   }
 
   @media (max-width: ${Breakpoint.LARGE_TABLET}px) {
-    padding: 60px;
+    .member-list-wrapper {
+      padding: 60px;
+    }
+    .side-overlay {
+      width: 60px;
+    }
+
+    .member-title {
+      margin: 0 60px;
+    }
   }
 
   @media (max-width: ${Breakpoint.TABLET}px) {
-    padding: 40px;
-    min-height: 40vh;
-
+    padding-top: 40px;
+    .member-list-wrapper {
+      padding: 40px;
+    }
+    .side-overlay {
+      width: 40px;
+    }
     .member-title {
-      margin-bottom: 30px;
+      margin: 0 40px;
     }
   }
 
   @media (max-width: ${Breakpoint.MOBILE}px) {
-    padding: 20px;
+    padding-top: 20px;
+    .member-list-wrapper {
+      padding: 20px;
+    }
+    .side-overlay {
+      width: 20px;
+    }
+    .member-title {
+      margin: 0 20px;
+    }
   }
 `;

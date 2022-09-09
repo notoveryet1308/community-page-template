@@ -3,8 +3,9 @@ import { Breakpoint, Colors } from "../../../styles/theme";
 
 export const StyledMemberCard = styled.div`
   position: relative;
+  width: 100%;
   .thumbnail {
-    width: 250px;
+    width: 270px;
     height: 250px;
     border-radius: 8px;
     background-color: #f8f8f8;

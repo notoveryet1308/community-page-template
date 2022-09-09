@@ -17,6 +17,8 @@ const Members = ({ memberData = [], primaryColor }) => {
           <MemberCard {...data} key={`${data.name}-${id}`} />
         ))}
       </div>
+      <div className="side-overlay left"></div>
+      <div className="side-overlay right"></div>
     </StyledMembers>
   );
 };
